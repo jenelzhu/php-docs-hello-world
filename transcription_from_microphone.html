@@ -1,22 +1,20 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Microsoft Cognitive Services Speech SDK JavaScript Transcription Quickstart</title>
+  <title>语音翻译</title>
   <meta charset="utf-8" />
 </head>
 <body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:13px;">
-  <div id="warning">
-    <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
-  </div>
   
   <div id="content" style="display:none">
     <table width="100%">
       <tr>
         <td></td>
-        <td><h1 style="font-weight:500;">Microsoft Cognitive Services Speech SDK JavaScript Quickstart</h1></td>
+        <td><h1 style="font-weight:500;">实时语音识别翻译器</h1></td>
       </tr>
       <tr>
-        <td align="right"><a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started" target="_blank">Subscription</a>:</td>
+        <td align="right">Subscription</a>:</td>
         <td><input id="subscriptionKey" type="text" size="40" value="KEY"></td>
       </tr>
       <tr>
@@ -24,10 +22,11 @@
         <td><input id="serviceRegion" type="text" size="40" value=""></td>
       </tr>
       <tr>
-        <td align="right">Language:</td>
+        <td align="right">需要翻译的语言:</td>
         <td align="left">
             <!-- For the full list of supported languages see: https://docs.microsoft.com/azure/cognitive-services/speech-service/supported-languages -->
             <select id="languageOptions">
+              <!-- 这是一段注释
                 <option value="ar-EG">Arabic - EG</option>
                 <option value="ca-ES">Catalan - ES</option>
                 <option value="da-DK">Danish - DK</option>
@@ -54,28 +53,28 @@
                 <option value="pt-BR">Portuguese - BR</option>
                 <option value="pt-PT">Portuguese - PT</option>
                 <option value="ru-RU">Russian - RU</option>
-                <option value="sv-SE">Swedish - SE</option>
+                <option value="sv-SE">Swedish - SE</option>-->
                 <option value="zh-CN">Chinese - CN</option>
                 <option value="zh-HK">Chinese - HK</option>
-                <option value="zh-TW">Chinese - TW</option>
+               <!-- 这是一段注释 <option value="zh-TW">Chinese - TW</option>-->
             </select>
         </td>
       </tr>
       <tr>
 
         <td></td>
-        <td><button id="startTranscriberButton">Start transcribing conversation</button></td>
+        <td><button id="startTranscriberButton">开始翻译对话</button></td>
       </tr>
       <tr>
         <td></td>
-        <td><button id="stopTranscriberButton">Stop transcribing conversation, close transcriber</button></td>
+        <td><button id="stopTranscriberButton">停止翻译对话</button></td>
       </tr>
       <tr>
-        <td align="right" valign="top">Input Text</td>
+        <td align="right" valign="top">语音识别：</td>
         <td><textarea id="phraseDiv" style="display: inline-block;width:500px;height:200px"></textarea></td>
       </tr>
       <tr>
-        <td align="right" valign="top">Result</td>
+        <td align="right" valign="top">翻译为：</td>
         <td><textarea id="resultDiv" style="display: inline-block;width:500px;height:100px"></textarea></td>
       </tr>
     </table>
