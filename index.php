@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Speech Transcription</title>
+  <title>Microsoft Cognitive Services Speech SDK JavaScript Transcription Quickstart</title>
   <meta charset="utf-8" />
 </head>
 <body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:13px;">
+  <div id="warning">
+    <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
+  </div>
+  
   <div id="content" style="display:none">
     <table width="100%">
       <tr>
