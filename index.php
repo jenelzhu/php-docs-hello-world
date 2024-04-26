@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>语音翻译</title>
+  <title>Speech Transcription</title>
   <meta charset="utf-8" />
 </head>
-<body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:13px;"> 
+<body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:13px;">
   <div id="content" style="display:none">
     <table width="100%">
       <tr>
         <td></td>
-        <td><h1 style="font-weight:500;">实时语音识别翻译器</h1></td>
+        <td><h1 style="font-weight:500;">Microsoft Cognitive Services Speech SDK JavaScript Quickstart</h1></td>
       </tr>
       <tr>
         <td align="right"><a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started" target="_blank">Subscription</a>:</td>
@@ -20,7 +20,7 @@
         <td><input id="serviceRegion" type="text" size="40" value=""></td>
       </tr>
       <tr>
-        <td align="right">需要翻译的语言:</td>
+        <td align="right">Language:</td>
         <td align="left">
             <!-- For the full list of supported languages see: https://docs.microsoft.com/azure/cognitive-services/speech-service/supported-languages -->
             <select id="languageOptions">
@@ -60,18 +60,18 @@
       <tr>
 
         <td></td>
-        <td><button id="startTranscriberButton">开始翻译对话</button></td>
+        <td><button id="startTranscriberButton">Start transcribing conversation</button></td>
       </tr>
       <tr>
         <td></td>
-        <td><button id="stopTranscriberButton">停止翻译对话</button></td>
+        <td><button id="stopTranscriberButton">Stop transcribing conversation, close transcriber</button></td>
       </tr>
       <tr>
-        <td align="right" valign="top">语音识别：</td>
+        <td align="right" valign="top">Input Text</td>
         <td><textarea id="phraseDiv" style="display: inline-block;width:500px;height:200px"></textarea></td>
       </tr>
       <tr>
-        <td align="right" valign="top">翻译为：</td>
+        <td align="right" valign="top">Result</td>
         <td><textarea id="resultDiv" style="display: inline-block;width:500px;height:100px"></textarea></td>
       </tr>
     </table>
