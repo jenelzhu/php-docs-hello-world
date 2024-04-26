@@ -18,7 +18,7 @@
     <table width="100%">
       <tr>
         <td></td>
-        <td><h1 style="font-weight:500;">Speech Recognition and translation</h1></td>
+        <td><h1 style="font-weight:500;">Speech Recognition and Translation</h1></td>
       </tr>
       <tr>
         <td><input id="subscriptionKey" type="text" size="40" value="KEY"></td>
@@ -30,37 +30,9 @@
         <td align="right">Language:</td>
         <td align="left">
             <!-- For the full list of supported languages see: https://docs.microsoft.com/azure/cognitive-services/speech-service/supported-languages -->
-            <select id="languageOptions">
-                <option value="ar-EG">Arabic - EG</option>
-                <option value="ca-ES">Catalan - ES</option>
-                <option value="da-DK">Danish - DK</option>
-                <option value="da-DK">Danish - DK</option>
-                <option value="de-DE">German - DE</option>
-                <option value="en-AU">English - AU</option>
-                <option value="en-CA">English - CA</option>
-                <option value="en-GB">English - GB</option>
-                <option value="en-IN">English - IN</option>
-                <option value="en-NZ">English - NZ</option>
-                <option selected="selected" value="en-US">English - US</option>
-                <option value="es-ES">Spanish - ES</option>
-                <option value="es-MX">Spanish - MX</option>
-                <option value="fi-FI">Finnish - FI</option>
-                <option value="fr-CA">French - CA</option>
-                <option value="fr-FR">French - FR</option>
-                <option value="hi-IN">Hindi - IN</option>
-                <option value="it-IT">Italian - IT</option>
-                <option value="ja-JP">Japanese - JP</option>
-                <option value="ko-KR">Korean - KR</option>
-                <option value="nb-NO">Norwegian - NO</option>
-                <option value="nl-NL">Dutch - NL</option>
-                <option value="pl-PL">Polish - PL</option>
-                <option value="pt-BR">Portuguese - BR</option>
-                <option value="pt-PT">Portuguese - PT</option>
-                <option value="ru-RU">Russian - RU</option>
-                <option value="sv-SE">Swedish - SE</option>
+            <select id="languageOptions">    
                 <option value="zh-CN">Chinese - CN</option>
                 <option value="zh-HK">Chinese - HK</option>
-                <option value="zh-TW">Chinese - TW</option>
             </select>
         </td>
       </tr>
@@ -71,7 +43,7 @@
       </tr>
       <tr>
         <td></td>
-        <td><button id="stopTranscriberButton">Stop transcribing conversation, close transcriber</button></td>
+        <td><button id="stopTranscriberButton">Stop transcribing conversation</button></td>
       </tr>
       <tr>
         <td align="right" valign="top">Input Text</td>
