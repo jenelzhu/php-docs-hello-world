@@ -2,6 +2,11 @@
 <html>
 <head>
   <title>Speech Transcription</title>
+    <style>
+        #subscriptionKey , #serviceRegion{
+            display: none;
+        }
+  </style>
   <meta charset="utf-8" />
 </head>
 <body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:13px;">
@@ -13,14 +18,12 @@
     <table width="100%">
       <tr>
         <td></td>
-        <td><h1 style="font-weight:500;">Microsoft Cognitive Services Speech SDK JavaScript Quickstart</h1></td>
+        <td><h1 style="font-weight:500;">Speech Recognition and translation</h1></td>
       </tr>
       <tr>
-        <td align="right"><a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started" target="_blank">Subscription</a>:</td>
         <td><input id="subscriptionKey" type="text" size="40" value="KEY"></td>
       </tr>
       <tr>
-        <td align="right">Region</td>
         <td><input id="serviceRegion" type="text" size="40" value=""></td>
       </tr>
       <tr>
