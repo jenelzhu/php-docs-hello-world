@@ -134,8 +134,6 @@
     var subscriptionKey, serviceRegion, languageTargetOptions;
     var SpeechSDK;
     var recognizer;
-	var authorizationToken;
-	
 
     document.addEventListener("DOMContentLoaded", function () {
       startRecognizeOnceAsyncButton = document.getElementById("startRecognizeOnceAsyncButton");
@@ -156,16 +154,13 @@
         resultsDivs.forEach(function(elem){
           elem.innerHTML = "";
         });
-		let speechConfig;
-		if (authorizationToken){
-          speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(authorizationToken, serviceRegion.value);
-        } else{
-			if (subscriptionKey.value === "" || subscriptionKey.value === "subscription") {
-				alert("Please enter your Microsoft Cognitive Services Speech subscription key!");
-				startRecognizeOnceAsyncButton.disabled = false;
-				return;
+
+        if (subscriptionKey.value === "" || subscriptionKey.value === "subscription") {
+          alert("Please enter your Microsoft Cognitive Services Speech subscription key!");
+          startRecognizeOnceAsyncButton.disabled = false;
+          return;
         }
-        speechConfig = SpeechSDK.SpeechTranslationConfig.fromSubscription(subscriptionKey.value, serviceRegion.value);}
+        var speechConfig = SpeechSDK.SpeechTranslationConfig.fromSubscription(subscriptionKey.value, serviceRegion.value);
 
         speechConfig.speechRecognitionLanguage = languageSourceOptions.value;
         let languageKeys = {};
@@ -208,6 +203,9 @@
 
         document.getElementById('content').style.display = 'block';
         document.getElementById('warning').style.display = 'none';
+		if (typeof RequestAuthorizationToken === "function") {
+          RequestAuthorizationToken();
+        }
       }
     });
   </script>
