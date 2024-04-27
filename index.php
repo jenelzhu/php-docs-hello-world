@@ -160,7 +160,7 @@
           startRecognizeOnceAsyncButton.disabled = false;
           return;
         }
-        var speechConfig = SpeechSDK.SpeechTranslationConfig.fromSubscription(subscriptionKey.value, serviceRegion.value);
+	var speechConfig = SpeechSDK.SpeechTranslationConfig.fromAuthorizationToken(authorizationToken, serviceRegion.value);
 
         speechConfig.speechRecognitionLanguage = languageSourceOptions.value;
         let languageKeys = {};
