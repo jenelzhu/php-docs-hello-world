@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: 06e01283bdc54180ae6e796bbcd42e6c" -d '{}' "https://eastus.api.cognitive.microsoft.com/sts/v1.0/issueToken"
